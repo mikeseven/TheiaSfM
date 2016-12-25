@@ -98,7 +98,7 @@ bool SolveQEP(const Matrix3d& M, const Matrix3d& C, const Matrix3d& K,
   // [ -inv(M)C  -inv(M)K ]z = sz
   // [ I         0        ]
 
-  Matrix3d inv_M;
+  Matrix3d inv_M=Matrix3d::Identity();
   static const double kDeterminantThreshold = 1e-12;
   bool invert_success;
   // Check that determinant of M is larger than threshold. This threshold only
